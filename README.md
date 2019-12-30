@@ -5,18 +5,29 @@ A PyTorch implementation of ESPCN based on CVPR 2016 paper
 ## Requirements
 - [Anaconda](https://www.anaconda.com/download/)
 - PyTorch
-```
+```bash
 conda install pytorch torchvision -c soumith
 conda install pytorch torchvision cuda80 -c soumith # install it if you have installed cuda
 ```
 - PyTorchNet
-```
+```bash
 pip install git+https://github.com/pytorch/tnt.git@master
 ```
 - opencv
-```
+```bash
 conda install opencv
 ```
+
+## nVidia-Docker
+
+Make sure you have nVidia - Docker installed, then do:
+
+```bash
+docker build -t espcn .
+docker run --gpus all --rm -it --ipc=host -p 8888:8888 espcn
+```
+
+you will be provided an URL through which you can connect to the Jupyter notebook.
 
 ## Datasets
 
